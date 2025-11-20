@@ -8,6 +8,14 @@
         <link rel="stylesheet" href="./abone.css">
     </head>
     <body>
+      <!-- Popup -->
+      <div id="popup" class="popup">
+         <div class="popup-content">
+            <h2>Teşekkürler!</h2>
+            <p>Bilgileriniz gönderildi.</p>
+            <button id="popup-tamam">Tamam</button>
+         </div>
+      </div>
         <!-- Başlık -->
         <div id="baslik-alani">
             <h1 id="baslik">Abone Kayıt Formu</h1>
@@ -62,5 +70,32 @@
             <input id="gonder" type="submit" value="Gönder">
           </div>
          </form>
+         <script>
+document.getElementById("abone-form").onsubmit = function(event) {
+    event.preventDefault(); // Sayfanın yenilenmesini engelle
+
+    // Form verilerini Apps Script URL'sine gönder
+    fetch(this.action, {
+        method: "POST",
+        body: new FormData(this)
+    }).then(response => response.text())
+      .then(result => {
+          // Pop-up göster
+          document.getElementById("popup").style.display = "flex";
+      }).catch(error => {
+          alert("Hata oluştu, lütfen tekrar deneyin.");
+      });
+
+    return false;
+};
+
+// Pop-up "Tamam" butonuna tıklandığında
+document.getElementById("popup-tamam").onclick = function() {
+    // Pop-up'ı gizle
+    document.getElementById("popup").style.display = "none";
+    // Formu temizle
+    document.getElementById("abone-form").reset();
+};
+</script>
     </body>
 </html>
