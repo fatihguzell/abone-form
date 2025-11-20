@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <title>Abone Kayıt Formu</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Abone Kayıt Formu">
+        <meta name="author" content="Fatih Güzel">
+        <link rel="stylesheet" href="./abone.css">
+    </head>
+    <body>
+        <!-- Başlık -->
+        <div id="baslik-alani">
+            <h1 id="baslik">Abone Kayıt Formu</h1>
+        </div>
+        <div id="bosluk"></div>
+        <!-- Form Alanı-->
+        <form action="https://script.google.com/macros/s/AKfycbzLFUrdoeUGFoj6OwgTzVl8ge9rpePocxY2NxVB_CvUUQg551EumD4KTdHB_OWE4UxFSg/exec" method="post" id="abone-form">         <div id="form-alani">
+            <!-- İsim -->
+             <div class="form-satir">
+                <label class="form-baslik" for="isim">İsim</label>
+                <input class="form-kutucuk" type="text" name="isim" id="isim" placeholder="İsminizi girin" required>
+             </div>
+             <!-- Soyisim -->
+             <div class="form-satir">
+                <label class="form-baslik" for="soyisim">Soyisim</label>
+                <input class="form-kutucuk" type="text" name="soyisim" id="soyisim" placeholder="Soyisminizi girin" required>
+             </div>
+             <!-- Telefon -->
+             <div class="form-satir">
+                <label class="form-baslik" for="telefon">Telefon Numarası</label>
+                <input class="form-kutucuk" type="text" name="telefon" id="telefon" placeholder="Telefon numaranızı girin" required>
+             </div>
+             <!-- Plaka -->
+             <div class="form-satir">
+                <label class="form-baslik" for="plaka">Plaka</label>
+                <input class="form-kutucuk" type="text" name="plaka" id="plaka" placeholder="Plakanızı girin" required>
+             </div>
+             <!-- Giriş Saati -->
+             <div class="form-satir">
+                <label class="form-baslik" for="giris-saati">Tahmini Giriş Saati</label>
+                <input class="form-kutucuk" type="time" name="giris_saati" id="giris-saati" required>
+             </div>
+             <!-- Çıkış Saati -->
+             <div class="form-satir">
+                <label class="form-baslik" for="cikis-saati">Tahmini Çıkış Saati</label>
+                <input class="form-kutucuk" type="time" name="cikis_saati" id="cikis-saati" required>
+             </div>
+             <!-- Not Bölümü -->
+             <div class="form-satir">
+                <label class="form-baslik" for="not">Not</label>
+                <textarea class="form-kutucuk" type="text" name="not" id="not" placeholder="Notunuzu yazın" rows="5"></textarea>
+             </div>
+             <!-- Onay -->
+             <div class="onay-satir">
+                 <input id="onay-tiki" type="checkbox" name="onay" id="onay" required>
+                <label class="form-baslik" id="onay-yazisi" for="onay">Bilgilerimin abonelik kaydı için kullanılmasına onay veriyorum.</label>
+             </div>
+         </div>
+         <div id="bosluk"></div>
+         <!-- Gönder Butonu -->
+          <div>
+            <input id="gonder" type="submit" value="Gönder">
+          </div>
+         </form>
+    </body>
+</html>
